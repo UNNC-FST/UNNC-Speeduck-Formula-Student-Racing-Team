@@ -1,5 +1,62 @@
-<!DOCTIPE html>
-<html langn="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title> UNNC Speeduck Formula Student Racing Team</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Racing Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">VELOCITY <span class="highlight">RACING</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#specs">Machine</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>PUSH THE <span class="highlight">LIMIT</span></h1>
+            <p>Engineering Excellence. Pure Adrenaline.</p>
+            <button class="cta-btn" onclick="scrollToSpecs()">View The Car</button>
+        </div>
+    </section>
+
+    <section id="specs" class="specs-section">
+        <h2>TECHNICAL SPECS</h2>
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h3>0-100 KPH</h3>
+                <p>3.2 Seconds</p> </div>
+            <div class="spec-card">
+                <h3>AERODYNAMICS</h3>
+                <p>High Downforce Package</p>
+            </div>
+            <div class="spec-card">
+                <h3>POWERTRAIN</h3>
+                <p>Electric / Hybrid</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2>TRACK GALLERY</h2>
+        <div class="gallery-grid">
+            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Car+Front" alt="Racing Car"></div>
+            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Cockpit" alt="Cockpit View"></div>
+            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Track+Action" alt="On Track"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Velocity Racing. Built for Speed.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+</html>
