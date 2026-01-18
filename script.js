@@ -1,9 +1,9 @@
 // script.js
 
 // Function to handle smooth scrolling
-function scrollToBine() {
+function scrollToSecmain() {
     // 1. Find the section with id="specs"
-    const specsSection = document.getElementById('bine');
+    const specsSection = document.getElementById('secmain');
     
     // 2. Use the built-in 'scrollIntoView' method with 'smooth' behavior
     specsSection.scrollIntoView({ 
