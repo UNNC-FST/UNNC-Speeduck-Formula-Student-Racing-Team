@@ -1,0 +1,152 @@
+/* style.css */
+
+/* 1. GLOBAL STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f; /* Dark Asphalt color */
+    color: #ffffff;
+    font-family: 'Teko', sans-serif; /* Tall, condensed font looks fast */
+    overflow-x: hidden; /* Prevents horizontal scroll from skewed elements */
+}
+
+/* 2. COLORS & UTILITIES */
+.highlight {
+    color: #ff3b3b; /* Racing Red accent color */
+    font-style: italic;
+}
+
+/* 3. NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.8);
+    position: fixed; /* Sticks to top */
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff3b3b;
+    border-bottom: 2px solid #ff3b3b;
+}
+
+/* 4. HERO SECTION */
+.hero {
+    height: 100vh; /* Full screen height */
+    /* Use a linear gradient to darken the image so text pops */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://placehold.co/1920x1080/222/555?text=Racing+Background');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 6rem; /* Massive title */
+    margin: 0;
+    line-height: 1;
+    font-style: italic; /* Speed look */
+    text-transform: uppercase;
+}
+
+.cta-btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background-color: #ff3b3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Teko', sans-serif;
+    transform: skew(-20deg); /* SKEW: Makes the button look like a parallelogram */
+    transition: 0.2s;
+}
+
+.cta-btn:hover {
+    background-color: #ffffff;
+    color: #ff3b3b;
+    transform: skew(-20deg) scale(1.1); /* Grow slightly on hover */
+}
+
+/* 5. SPECS SECTION */
+.specs-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+.specs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.spec-card {
+    background: #252525;
+    border-left: 5px solid #ff3b3b; /* Red racing stripe on left */
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.spec-card:hover {
+    transform: translateY(-10px); /* Lifts up when you mouse over */
+}
+
+/* 6. GALLERY SECTION */
+.gallery-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive grid */
+    gap: 15px;
+    padding: 20px;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: grayscale(100%); /* Make images Black & White initially */
+    transition: 0.4s;
+}
+
+.photo-card img:hover {
+    filter: grayscale(0%); /* Restore color on hover */
+    transform: scale(1.02);
+}
+    transform: scale(1.02);
+}
