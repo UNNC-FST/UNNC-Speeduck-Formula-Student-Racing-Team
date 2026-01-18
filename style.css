@@ -55,16 +55,43 @@ body {
 }
 
 /* 4. HERO SECTION */
+
+/* Hero 区域保持全屏 */
 .hero {
-    height: 100vh; /* Full screen height */
-    /* Use a linear gradient to darken the image so text pops */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://placehold.co/1920x1080/222/555?text=Racing+Background');
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative; /* 关键：作为绝对定位的父级 */
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* 防止视频超出 */
+}
+
+/* 视频背景样式 */
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -2; /* 放在最底层 */
+    object-fit: cover; /* 关键：确保视频铺满屏幕不变形 */
+}
+
+/* 遮罩层样式 */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* 半透明黑色 */
+    z-index: -1; /* 放在视频之上，文字之下 */
+}
+
+/* 确保文字在最上层 */
+.hero-content {
+    z-index: 1;
     text-align: center;
 }
 
