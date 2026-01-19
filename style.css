@@ -88,7 +88,7 @@ body {
     background-size: cover;
     background-position: center;
     opacity: 0; /* 默认透明 */
-    animation: slideAnimation 15s infinite; /* 15秒循环一次 */
+    animation: slideAnimation 18s infinite; /* 18秒循环一次 */
 }
 
 /* 3. 错开每张图片的时间，让它们轮流出现 */
@@ -107,6 +107,9 @@ body {
 }
 .slide:nth-child(5) {
     animation-delay: 12s; /* 第5张延迟12秒开始 */
+}
+.slide:nth-child(6) {
+    animation-delay: 15s; /* 第6张延迟15秒开始 */
 }
 
 
