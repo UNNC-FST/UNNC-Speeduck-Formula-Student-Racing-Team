@@ -97,11 +97,18 @@ body {
     animation-delay: 0s;
 }
 .slide:nth-child(2) {
-    animation-delay: 5s; /* 第2张延迟5秒开始 */
+    animation-delay: 3s; /* 第2张延迟3秒开始 */
 }
 .slide:nth-child(3) {
-    animation-delay: 10s; /* 第3张延迟10秒开始 */
+    animation-delay: 6s; /* 第3张延迟6秒开始 */
 }
+.slide:nth-child(4) {
+    animation-delay: 9s; /* 第4张延迟9秒开始 */
+}
+.slide:nth-child(5) {
+    animation-delay: 12s; /* 第5张延迟12秒开始 */
+}
+
 
 /* 4. 核心动画：淡入淡出 + 缓慢放大 */
 @keyframes slideAnimation {
