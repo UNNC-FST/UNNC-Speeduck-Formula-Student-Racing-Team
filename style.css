@@ -217,3 +217,27 @@ body {
 }
     transform: scale(1.02);
 }
+/* 次页展示页的css开始 */
+/* 针对次页大标题的定制 */
+.welcome-msg {
+    font-size: 5.5rem;          /* 显著放大尺寸 */
+    text-align: center;         /* 居中对齐 */
+    text-transform: uppercase;  /* 全大写，更有力量感 */
+    letter-spacing: -2px;       /* 紧凑的字间距，看起来更“快” */
+    line-height: 0.9;           /* 压缩行高，让文字更有整体感 */
+    margin-top: 50px;           /* 与导航栏保持距离 */
+    margin-bottom: 60px;        /* 与下方网格保持距离 */
+    font-weight: 600;
+    
+    /* 可选：添加一个微弱的文字阴影，增加立体感 */
+    text-shadow: 3px 3px 0px rgba(255, 59, 59, 0.2); 
+}
+
+/* 适配移动端：防止文字过大溢出屏幕 */
+@media (max-width: 768px) {
+    .welcome-msg {
+        font-size: 3rem;
+        letter-spacing: 0;
+    }
+}
+/* 次页展示页的css结束 */
