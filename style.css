@@ -378,7 +378,7 @@ body {
     font-size: 18rem;
     font-weight: 900;
     /* 增加对比度到 0.04 */
-    color: rgba(255, 255, 255, 0.04); 
+    color: rgba(255, 255, 255, 0.1); 
     font-style: italic;
     transform: rotate(-3deg);
     white-space: nowrap;
