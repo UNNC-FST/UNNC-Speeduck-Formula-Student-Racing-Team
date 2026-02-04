@@ -482,5 +482,46 @@ body {
     grid-template-columns: repeat(4, 1fr); /* 商业图采用四列并行 */
 }
 
+/* --- 商业组页面整体居中调整 --- */
+
+.bine-section .container {
+    max-width: 1200px;      /* 限制最大宽度，防止在大屏幕上散开 */
+    margin: 0 auto;         /* 关键：水平方向自动边距，实现居中 */
+    padding: 0 20px;        /* 增加左右内边距，防止贴边 */
+    display: flex;
+    flex-direction: column; /* 让内部模块纵向排列 */
+    align-items: center;    /* 关键：让内部所有元素在水平方向上居中 */
+    text-align: center;     /* 确保文字默认居中 */
+}
+
+/* 调整介绍区域 */
+.bine-intro {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.bine-intro .description {
+    margin: 20px auto;      /* 配合 margin auto 实现文字块居中 */
+    max-width: 800px;       /* 限制宽度让阅读更舒适 */
+}
+
+/* 调整权益网格居中 */
+.benefits-grid {
+    width: 100%;            /* 撑满 container */
+    justify-content: center; /* 网格内容居中 */
+}
+
+/* 调整社交媒体块居中 */
+.contact-social-block {
+    width: 100%;
+    max-width: 900px;       /* 限制一下联系栏宽度，居中更好看 */
+    margin: 80px auto 0;    /* 水平居中 */
+    justify-content: center;/* 内部子元素居中 */
+    flex-direction: column; /* 手机端/居中模式下纵向排列 */
+    gap: 30px;
+    border-left: none;      /* 既然居中了，侧边线可以去掉或改到底部 */
+    border-bottom: 5px solid #ff3b3b; 
+}
+
 /* 商业组展示页的css结束 */
 
