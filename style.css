@@ -474,6 +474,25 @@ body {
 .social-btn.dy:hover { background: #000000; box-shadow: 0 0 15px rgba(255,255,255,0.2); } /* 抖音黑 */
 .social-btn.xhs:hover { background: #ff2442; } /* 小红书红 */
 .social-btn.wx:hover { background: #07c160; }  /* 微信绿 */
+/* 哔哩哔哩蓝 */
+.social-btn.bili:hover { 
+    background: #00aeec; 
+    box-shadow: 0 0 15px rgba(0, 174, 236, 0.4); 
+    border-color: #00aeec;
+}
+
+/* 微博黄/红 (采用微博经典的红黄渐变感或明亮的品牌红) */
+.social-btn.wb:hover { 
+    background: #fbb01b; /* 微博醒目的黄色 */
+    color: #333; /* 黄色背景下深色文字更清晰 */
+    box-shadow: 0 0 15px rgba(251, 176, 27, 0.4);
+    border-color: #fbb01b;
+}
+
+/* 如果你更喜欢微博的那种红橙色，可以选这个： */
+/* .social-btn.wb:hover { background: #e6162d; box-shadow: 0 0 15px rgba(230, 22, 45, 0.4); } */
+
+
 
 /* 商业图片网格微调 */
 .bine-gallery .gallery-grid {
