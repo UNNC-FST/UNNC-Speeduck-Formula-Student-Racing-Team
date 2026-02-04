@@ -240,4 +240,128 @@ body {
         letter-spacing: 0;
     }
 }
+
+/* --- 次页展示页增强样式 --- */
+
+.secmain-section {
+    padding: 100px 50px;
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.sec-title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-left: 8px solid #ff3b3b;
+    padding-left: 20px;
+}
+
+/* 简介区块样式 */
+.intro-block {
+    margin-bottom: 80px;
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+.intro-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.intro-stats span {
+    font-size: 1.8rem;
+    color: #ff3b3b;
+}
+
+/* 导航入口网格 (Hub) */
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.hub-card {
+    position: relative;
+    height: 400px;
+    background: #222;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: white;
+    transform: skew(-5deg); /* 保持整体设计的斜角感 */
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hub-card:hover {
+    transform: skew(-5deg) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 59, 59, 0.3);
+}
+
+.card-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) brightness(0.6);
+    transition: 0.5s;
+}
+
+.hub-card:hover .card-bg {
+    filter: grayscale(0%) brightness(0.4);
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.module-code {
+    font-size: 1.2rem;
+    color: #ff3b3b;
+    font-family: monospace;
+}
+
+.hub-card h3 {
+    font-size: 2.5rem;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+/* 预告内容 (Teaser) 默认隐藏，悬停显示 */
+.teaser-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.hub-card:hover .teaser-content {
+    max-height: 150px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.preview-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #ff3b3b;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 /* 次页展示页的css结束 */
