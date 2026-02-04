@@ -24,15 +24,19 @@ window.addEventListener('scroll', function() {
 
 // 电控的js
 function showEl(groupId) {
-    // 1. 隐藏所有内容模块
+    // 1. 隐藏所有模块
     const contents = document.querySelectorAll('.el-content');
     contents.forEach(content => content.classList.remove('active'));
 
-    // 2. 取消所有按钮的激活状态
+    // 2. 取消所有按钮状态
     const buttons = document.querySelectorAll('.el-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // 3. 显示当前点击的模块并激活对应按钮
+    // 3. 激活当前选中的模块和按钮
     document.getElementById('el-' + groupId).classList.add('active');
     event.currentTarget.classList.add('active');
+
+    // 4. (可选) 切换时自动滚动到电控区顶部，开始新一页的阅读
+    document.getElementById('electric').scrollIntoView({ behavior: 'smooth' });
 }
+//电控js结束
