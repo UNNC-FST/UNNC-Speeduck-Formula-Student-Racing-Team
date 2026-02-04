@@ -309,13 +309,12 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: grayscale(100%) brightness(0.6);
-    transition: 0.5s;
+    filter: brightness(0.7);
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hub-card:hover .card-bg {
-    filter: grayscale(0%) brightness(0.4);
-    transform: scale(1.1);
+    filter: brightness(0.4) scale(1.1);
 }
 
 .card-overlay {
