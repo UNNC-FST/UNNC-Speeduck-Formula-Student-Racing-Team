@@ -343,32 +343,61 @@ body {
 }
 
 /* 次页展示页背景 */
+
+/* --- 次页展示页背景增强版 --- */
+
 .secmain-section {
     position: relative;
     padding: 100px 50px;
-    /* 组合背景：深色渐变 + 微小的网格纹理 */
-    background-color: #0f0f0f;
-    background-image: 
-        linear-gradient(rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.9)),
-        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.03) 40px),
-        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.03) 40px);
+    /* 核心修改：使用径向渐变营造“中心亮、四周暗”的灯光感，打破纯黑 */
+    background: 
+        radial-gradient(circle at 50% 30%, rgba(255, 59, 59, 0.08) 0%, transparent 70%), /* 微弱红光晕 */
+        radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0a0a0a 100%); /* 渐变黑 */
     overflow: hidden;
+    z-index: 1; /* 开启层级上下文 */
 }
 
-/* 添加一个巨大的、半透明的装饰文字作为背景水纹 */
+/* 修改 1：网格纹理改为 ::after 独立层，并稍微加强亮度 */
+.secmain-section::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 48px, rgba(255, 255, 255, 0.03) 49px, transparent 50px),
+        repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(255, 255, 255, 0.03) 49px, transparent 50px);
+    pointer-events: none;
+    z-index: -1; /* 确保在内容后面 */
+}
+
+/* 修改 2：背景水印文字 ENGINEERING - 调整层级与透明度 */
 .secmain-section::before {
     content: "ENGINEERING";
     position: absolute;
-    top: 10%;
-    right: -5%;
-    font-size: 15rem;
+    bottom: -5%; /* 移到下方，不遮挡欢迎语 */
+    left: -2%;
+    font-size: 18rem;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.02); /* 极其微弱，若隐若现 */
+    /* 增加对比度到 0.04 */
+    color: rgba(255, 255, 255, 0.04); 
     font-style: italic;
-    transform: rotate(-5deg);
+    transform: rotate(-3deg);
     white-space: nowrap;
-    z-index: 0;
+    z-index: -2; /* 放在最底层 */
     pointer-events: none;
 }
+
+/* 新增：左上角赛道斜纹装饰，增加速度感 */
+.secmain-section .container {
+    position: relative;
+    z-index: 10; /* 强制让你的 Welcome 和 Card 浮在背景装饰之上 */
+}
+
+/* 针对 Welcome 语的额外间距，防止被导航栏遮挡 */
+.welcome-msg {
+    position: relative;
+    z-index: 11;
+    margin-top: 20px;
+}
+
 /* 次页展示页背景结束 */
 /* 次页展示页的css结束 */
