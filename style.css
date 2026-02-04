@@ -207,12 +207,10 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
-    filter: grayscale(100%); /* Make images Black & White initially */
     transition: 0.4s;
 }
 
 .photo-card img:hover {
-    filter: grayscale(0%); /* Restore color on hover */
     transform: scale(1.02);
 }
     transform: scale(1.02);
