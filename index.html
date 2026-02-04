@@ -219,12 +219,54 @@
 
     <section id="ele" class="ele-section">
     <!-- 电控展示页 -->
-        <h2>Electronic Group</h2>
-        <div class="ele-grid">
-            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Car+Front" alt="Racing Car"></div>
-            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Cockpit" alt="Cockpit View"></div>
-            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Track+Action" alt="On Track"></div>
+    <div class="container">
+        <h2 class="sec-title">ELECTRIC <span class="highlight">SYSTEM</span></h2>
+        
+        <div class="el-nav">
+            <button class="el-btn active" onclick="showEl('hv')">高压 HV</button>
+            <button class="el-btn" onclick="showEl('lv')">低压 LV</button>
+            <button class="el-btn" onclick="showEl('sw')">软件 SW</button>
         </div>
+
+        <div id="el-hv" class="el-content active">
+            <div class="el-grid">
+                <div class="el-info">
+                    <h3>High <span class="highlight">Voltage</span></h3>
+                    <p>负责动力电池包（Accumulator）的设计与组装，电压高达 600V。我们专注于能量密度优化、热管理系统以及高压安全回路（IMD/TSAL）。</p>
+                </div>
+                <div class="el-gallery">
+                    <img src="images/hv-1.jpg" alt="Battery Pack">
+                    <img src="images/hv-2.jpg" alt="BMS System">
+                </div>
+            </div>
+        </div>
+
+        <div id="el-lv" class="el-content">
+            <div class="el-grid">
+                <div class="el-info">
+                    <h3>Low <span class="highlight">Voltage</span></h3>
+                    <p>车队的“神经系统”。负责整车线束布置、各控制单元（ECU）电源管理、传感器信号采集以及方向盘交互控制板（Dash）。</p>
+                </div>
+                <div class="el-gallery">
+                    <img src="images/lv-1.jpg" alt="Wiring Harness">
+                    <img src="images/lv-2.jpg" alt="PCB Design">
+                </div>
+            </div>
+        </div>
+
+        <div id="el-sw" class="el-content">
+            <div class="el-grid">
+                <div class="el-info">
+                    <h3>Software <span class="highlight">& Control</span></h3>
+                    <p>编写底层控制逻辑与策略。包括扭矩矢量分配、再生制动算法、CAN总线通信协议优化以及实时遥测系统（Telemetry）。</p>
+                </div>
+                <div class="el-gallery">
+                    <img src="images/sw-1.jpg" alt="Code Matrix">
+                    <img src="images/sw-2.jpg" alt="Data Telemetry">
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
 
     <section id="specs" class="specs-section">
