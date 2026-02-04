@@ -21,3 +21,18 @@ window.addEventListener('scroll', function() {
         navbar.style.background = 'rgba(0,0,0,0.8)';
     }
 });
+
+// 电控的js
+function showEl(groupId) {
+    // 1. 隐藏所有内容模块
+    const contents = document.querySelectorAll('.el-content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    // 2. 取消所有按钮的激活状态
+    const buttons = document.querySelectorAll('.el-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // 3. 显示当前点击的模块并激活对应按钮
+    document.getElementById('el-' + groupId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
