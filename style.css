@@ -545,6 +545,13 @@ body {
 
 /* 电控组展示页的css开始 */
 /* --- 电控组专属背景 --- */
+.module-tag {
+    font-size: 0.9rem;
+    color: #ff3b3b;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.8;
+}
+
 .electric-section {
     padding: 100px 50px;
     background: #0a0a0a;
@@ -627,13 +634,14 @@ body {
 }
 
 .text-page .el-info p {
-    font-size: 1.4rem; 
-    line-height: 1.6;        /* 适中的行高，增加易读性 */
-    max-width: 800px;       /* 限制宽度，防止长句在宽屏上难以阅读 */
-    margin: 20px auto;      /* 确保段落居中 */
-    color: rgba(255, 255, 255, 0.8); /* 稍微柔和的白色，不刺眼 */
-    text-align: center;      /* 确保文字居中对齐 */
-    font-weight: 400;
+    font-size: 1.15rem;      /* 字号下调，接近专业技术手册感 */
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 650px;       /* 限制宽度，防止文字撑满屏 */
+    margin-top: 20px;
+    margin-left: 0;         /* 靠左对齐 */
+    border-left: 2px solid rgba(255, 59, 59, 0.3); /* 加入侧边装饰线 */
+    padding-left: 25px;
 }
 
 /* 图片页样式 */
@@ -698,17 +706,16 @@ body {
 }
 
 .text-page h3 {
-    font-size: 3.5rem; /* 稍微缩小标题，避免撑得太开 */
-    margin: 10px 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 3rem; /* 稍微缩小标题，避免撑得太开 */
+    margin: 0;
+    text-align: left;
 }
 
 .line-divider {
-    width: 60px;
-    height: 3px;
+    width: 120px;
+    height: 2px;
     background: #ff3b3b;
-    margin: 15px auto 25px auto;
+    margin: 15px 0 20px 0;
 }
 
 .text-page p {
