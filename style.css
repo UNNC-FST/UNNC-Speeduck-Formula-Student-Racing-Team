@@ -627,11 +627,13 @@ body {
 }
 
 .text-page .el-info p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.5rem; /* 字号加大更清晰 */
-    line-height: 1.8;
-    color: #ddd;
+    font-size: 1.4rem; 
+    line-height: 1.6;        /* 适中的行高，增加易读性 */
+    max-width: 800px;       /* 限制宽度，防止长句在宽屏上难以阅读 */
+    margin: 20px auto;      /* 确保段落居中 */
+    color: rgba(255, 255, 255, 0.8); /* 稍微柔和的白色，不刺眼 */
+    text-align: center;      /* 确保文字居中对齐 */
+    font-weight: 400;
 }
 
 /* 图片页样式 */
@@ -698,10 +700,15 @@ body {
 .text-page h3 {
     font-size: 3.5rem; /* 稍微缩小标题，避免撑得太开 */
     margin: 10px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .line-divider {
-    margin: 15px auto; /* 缩小分割线上下边距 */
+    width: 60px;
+    height: 3px;
+    background: #ff3b3b;
+    margin: 15px auto 25px auto;
 }
 
 .text-page p {
