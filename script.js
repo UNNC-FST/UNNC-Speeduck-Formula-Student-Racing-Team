@@ -34,10 +34,10 @@ function showEl(groupId) {
 
     // 3. 激活当前选中的模块和按钮
     document.getElementById('el-' + groupId).classList.add('active');
-    event.currentTarget.classList.add('active');
+    if (window.event) window.event.currentTarget.classList.add('active');
 
     // 4. (可选) 切换时自动滚动到电控区顶部，开始新一页的阅读
-    document.getElementById('electric').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('ele').scrollIntoView({ behavior: 'smooth' });
 }
 //电控js结束
 
@@ -55,7 +55,7 @@ function showMc(groupId) {
 
     // 显示目标内容
     document.getElementById('mc-' + groupId).classList.add('active');
-    event.currentTarget.classList.add('active');
+    if (window.event) window.event.currentTarget.classList.add('active');
 
     // 平滑滚动到板块顶部，防止用户在页面下方切换时迷失
     document.getElementById('machine').scrollIntoView({ behavior: 'smooth', block: 'start' });
