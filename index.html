@@ -310,21 +310,87 @@
     </div>
     </section>
 
-    <section id="specs" class="specs-section">
-    <!-- 机械展示页 -->
-        <h2>TECHNICAL SPECS</h2>
-        <div class="specs-grid">
-            <div class="spec-card">
-                <h3>0-100 KPH</h3>
-                <p>3.2 Seconds</p> </div>
-            <div class="spec-card">
-                <h3>AERODYNAMICS</h3>
-                <p>High Downforce Package</p>
+   
+    <section id="machine" class="machine-section"> 
+        <!-- 机械展示页 -->
+        <div class="container">
+            <h2 class="sec-title">MECHANICAL <span class="highlight">ENGINEERING</span></h2>
+            
+            <div class="mc-nav">
+                <button class="mc-btn active" onclick="showMc('braking')">制动 BRAKING</button>
+                <button class="mc-btn" onclick="showMc('chassis')">底盘 CHASSIS</button>
+                <button class="mc-btn" onclick="showMc('aero')">空套 AERO</button>
+                <button class="mc-btn" onclick="showMc('frame')">车架 FRAME</button>
             </div>
-            <div class="spec-card">
-                <h3>POWERTRAIN</h3>
-                <p>Electric / Hybrid</p>
+    
+        <div id="mc-braking" class="mc-content active">
+            <div class="mc-page text-page">
+                <div class="mc-info">
+                    <span class="module-tag">SPEC: 04_BRAKING_SYS</span>
+                    <h3>Braking <span class="highlight">System</span></h3>
+                    <div class="line-divider"></div>
+                    <p>制动组负责整车的减速性能与动态稳定性。我们通过自研轻量化制动盘与踏板机构，结合精密平衡阀调节，确保赛车在进入弯道前拥有极高的制动线性度与安全性。</p>
+                </div>
             </div>
+            <div class="mc-page image-page">
+                <div class="mc-full-gallery">
+                    <div class="img-wrapper"><img src="images/machine-brk1.jpg" alt="Braking 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-brk2.jpg" alt="Braking 2" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="mc-chassis" class="mc-content">
+            <div class="mc-page text-page">
+                <div class="mc-info">
+                    <span class="module-tag">SPEC: 05_CHASSIS_GEO</span>
+                    <h3>Chassis <span class="highlight">Geometry</span></h3>
+                    <div class="line-divider"></div>
+                    <p>底盘组是操控性能的核心。我们专注于悬架几何设计、立柱强度分析以及弹簧阻尼的精细调校。通过大量的仿真数据，我们平衡了机械抓地力与操稳性，让赛车能够紧贴赛道飞行。</p>
+                </div>
+            </div>
+            <div class="mc-page image-page">
+                <div class="mc-full-gallery">
+                    <div class="img-wrapper"><img src="images/machine-cha1.jpg" alt="Chassis 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-cha2.jpg" alt="Chassis 2" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="mc-aero" class="mc-content">
+            <div class="mc-page text-page">
+                <div class="mc-info">
+                    <span class="module-tag">SPEC: 06_AERODYNAMICS</span>
+                    <h3>Aerodynamics <span class="highlight">Kit</span></h3>
+                    <div class="line-divider"></div>
+                    <p>空套组利用气流为赛车注入下压力。我们设计了完整的前翼、尾翼及底盘扩散器系统。基于 CFD 计算流体动力学仿真，我们在降低阻力的同时，极大提升了赛车在高速弯道中的极限速度。</p>
+                </div>
+            </div>
+            <div class="mc-page image-page">
+                <div class="mc-full-gallery">
+                    <div class="img-wrapper"><img src="images/machine-aero1.jpg" alt="Aero 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-aero2.jpg" alt="Aero 2" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="mc-frame" class="mc-content">
+            <div class="mc-page text-page">
+                <div class="mc-info">
+                    <span class="module-tag">SPEC: 07_STRUCTURE</span>
+                    <h3>Frame <span class="highlight">Structure</span></h3>
+                    <div class="line-divider"></div>
+                    <p>车架是赛车的生命骨架。我们采用高强度钢管桁架结构，通过扭转刚度仿真与疲劳测试，确保了底盘的坚固性。同时，我们对碰撞保护区进行了专项优化，为驾驶员提供最坚实的保护。</p>
+                </div>
+            </div>
+            <div class="mc-page image-page">
+                <div class="mc-full-gallery">
+                    <div class="img-wrapper"><img src="images/machine-frm1.jpg" alt="Frame 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-frm2.jpg" alt="Frame 2" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    
         </div>
     </section>
 
