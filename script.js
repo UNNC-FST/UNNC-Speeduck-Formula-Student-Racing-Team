@@ -40,3 +40,30 @@ function showEl(groupId) {
     document.getElementById('electric').scrollIntoView({ behavior: 'smooth' });
 }
 //电控js结束
+
+
+//机械的js
+
+function showMc(groupId) {
+    // 隐藏所有机械组内容
+    const contents = document.querySelectorAll('.mc-content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    // 取消按钮激活
+    const buttons = document.querySelectorAll('.mc-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // 显示目标内容
+    document.getElementById('mc-' + groupId).classList.add('active');
+    event.currentTarget.classList.add('active');
+
+    // 平滑滚动到板块顶部，防止用户在页面下方切换时迷失
+    document.getElementById('machine').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+//机械的js结束
+
+
+
+
+
