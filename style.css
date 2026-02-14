@@ -757,88 +757,71 @@ body {
 }
 
 /* ================================================= */
-/* 机械组排版：紧凑左右分栏 (请直接覆盖旧代码) */
+/* 左文字 + 右侧两图上下叠放 */
 /* ================================================= */
 
-.mc-content {
-    display: none;
-    animation: fadeIn 0.5s ease-out;
+#machine .mc-content.active {
+    display: flex !important;
+    flex-direction: row !important; 
+    flex-wrap: nowrap !important;   
+    align-items: center !important; /* 确保左右两侧整体垂直居中对齐 */
+    justify-content: space-between !important;
+    gap: 50px !important; /* 左右板块的间距 */
+    padding: 30px 0 !important;
 }
 
-/* 核心：将激活状态改为 flex，实现左右并排 */
-.mc-content.active { 
-    display: flex !important; /* 强制覆盖旧的 block 属性 */
-    flex-wrap: wrap; 
-    align-items: center; 
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 40px;
+#machine .mc-page {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-/* 移除原有的全屏 padding，彻底压缩高度 */
-.mc-page {
-    padding: 0;
-    display: block; 
+/* 左侧文字区 */
+#machine .mc-page.text-page {
+    width: 45% !important;
+    flex: none !important;
 }
 
-/* 左侧文字区：限制宽度约占 45% */
-.mc-page.text-page {
-    flex: 1 1 400px;
+/* 右侧图片区：宽度稍微收窄，配合上下叠放的比例 */
+#machine .mc-page.image-page {
+    width: 45% !important; 
+    flex: none !important;
 }
 
-.mc-info {
-    text-align: left;
+/* 【修改 1】：改为单列，实现上下排版 */
+#machine .mc-full-gallery {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* 1fr 代表单列排列 */
+    gap: 20px !important; /* 上下两张图片之间的间距 */
 }
 
-.mc-info h3 {
-    font-size: 2.8rem;
-    margin: 0;
-    text-transform: uppercase;
+/* 【修改 2】：彻底消除底部的黑色缝隙 */
+#machine .img-wrapper {
+    background: #000 !important;
+    padding: 5px !important; /* 保留细微的黑色金属边框感 */
+    border: 1px solid #333 !important;
+    display: block !important;
+    line-height: 0 !important; /* 杀手锏：消除默认的文本行高空白 */
 }
 
-.mc-info p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ccc;
-    margin-top: 15px;
-    padding-left: 20px;
-    border-left: 3px solid #ff3b3b;
+/* 【修改 3】：调整单张图片高度 */
+#machine .img-wrapper img {
+    display: block !important; /* 杀手锏2：让图片变成块级元素，不留缝隙 */
+    width: 100% !important;
+    height: 220px !important;  /* 两张各 220px，加起来正好和左侧文字差不多高 */
+    object-fit: cover !important;
+    margin: 0 !important;
 }
 
-/* 右侧图片区：限制宽度约占 55% */
-.mc-page.image-page {
-    flex: 1.2 1 450px;
+/* 手机端适配：屏幕变小后自动变成“上文字、下图片” */
+@media (max-width: 900px) {
+    #machine .mc-content.active {
+        flex-direction: column !important; 
+    }
+    #machine .mc-page.text-page,
+    #machine .mc-page.image-page {
+        width: 100% !important; 
+    }
 }
-
-.mc-full-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 右侧两张图并排 */
-    gap: 15px;
-    width: 100%;
-}
-
-.mc-page .img-wrapper {
-    background: #000;
-    padding: 5px;
-    border: 1px solid #333;
-}
-
-/* 关键：大幅度压低图片高度，消除空旷感 */
-.mc-page .img-wrapper img {
-    width: 100%;
-    height: 240px; 
-    object-fit: cover;
-    opacity: 0.85;
-    transition: 0.3s;
-}
-
-.mc-page .img-wrapper img:hover {
-    opacity: 1;
-    transform: scale(1.05);
-    border-color: #ff3b3b;
-}
-
 
 /* 机械组展示页的css结束 */
 
