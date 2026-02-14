@@ -756,132 +756,89 @@ body {
     box-shadow: 0 0 15px rgba(255, 59, 59, 0.3);
 }
 
-/* 文字页排版：左对齐非对称 */
+/* ================================================= */
+/* 机械组排版：紧凑左右分栏 (请直接覆盖旧代码) */
+/* ================================================= */
+
 .mc-content {
     display: none;
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.5s ease-out;
 }
 
-.mc-content.active {
-    display: flex; 
-    flex-wrap: wrap; /* 手机端自动变为上下排列 */
+/* 核心：将激活状态改为 flex，实现左右并排 */
+.mc-content.active { 
+    display: flex !important; /* 强制覆盖旧的 block 属性 */
+    flex-wrap: wrap; 
     align-items: center; 
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    gap: 40px; /* 左右板块的间距 */
-    padding-top: 20px;display: block; 
+    gap: 40px;
 }
 
+/* 移除原有的全屏 padding，彻底压缩高度 */
 .mc-page {
     padding: 0;
-    width: auto;
+    display: block; 
 }
 
-.mc-info {
-    max-width: 900px;
-    width: 100%;
-    text-align: left; /* 非对称左对齐 */
-}
-
-.mc-info p {
-    font-size: 1.15rem; /* 与电控组统一 */
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 600px; /* 限制宽度，防止横跨屏幕 */
-    margin-left: 0;
-    border-left: 3px solid #ff3b3b; /* 红色特征线 */
-    padding-left: 30px;
-    margin-top: 25px;
-}
-
-/* 图片页排版 */
-.mc-full-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.mc-page .img-wrapper {
-    background: #000;
-    padding: 10px;
-    border: 1px solid #333; /* 模拟机械图纸边框 */
-}
-
-.mc-page .img-wrapper img {
-    width: 100%;
-    height: 500px; /* 控制高度，防止图片过长 */
-    object-fit: cover;
-    opacity: 0.9;
-    transition: 0.5s;
-}
-
-.mc-page .img-wrapper img:hover {
-    opacity: 1;
-    transform: scale(1.02);
-}
-/* ================= 左侧：文字参数区 ================= */
+/* 左侧文字区：限制宽度约占 45% */
 .mc-page.text-page {
-    flex: 1 1 400px; /* 左侧占据约 40% 的空间 */
+    flex: 1 1 400px;
 }
 
 .mc-info {
-    width: 100%;
     text-align: left;
 }
 
 .mc-info h3 {
-    font-size: 3rem;
-    margin: 5px 0;
-}
-
-.line-divider {
-    width: 80px; /* 稍微缩短分割线 */
-    margin: 15px 0; 
+    font-size: 2.8rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 .mc-info p {
     font-size: 1.1rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    color: #ccc;
     margin-top: 15px;
     padding-left: 20px;
     border-left: 3px solid #ff3b3b;
-    max-width: 100%; /* 取消限宽，让文字自然填满左侧容器 */
 }
 
-/* ================= 右侧：紧凑图片区 ================= */
+/* 右侧图片区：限制宽度约占 55% */
 .mc-page.image-page {
-    flex: 1.2 1 500px; /* 右侧稍微宽一点，占据约 60% 的空间 */
+    flex: 1.2 1 450px;
 }
 
 .mc-full-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 右侧两张图片并排展示 */
-    gap: 15px; /* 缩小图片间的空隙 */
+    grid-template-columns: 1fr 1fr; /* 右侧两张图并排 */
+    gap: 15px;
     width: 100%;
 }
 
 .mc-page .img-wrapper {
     background: #000;
-    padding: 6px; /* 减小类似相框的边距 */
-    border: 1px solid #333; 
+    padding: 5px;
+    border: 1px solid #333;
 }
 
+/* 关键：大幅度压低图片高度，消除空旷感 */
 .mc-page .img-wrapper img {
     width: 100%;
-    height: 260px; /* 【关键】大幅降低图片高度，原为500px，现彻底消除空旷感 */
+    height: 240px; 
     object-fit: cover;
-    opacity: 0.9;
-    transition: 0.5s;
+    opacity: 0.85;
+    transition: 0.3s;
 }
 
 .mc-page .img-wrapper img:hover {
     opacity: 1;
-    transform: scale(1.03);
+    transform: scale(1.05);
+    border-color: #ff3b3b;
 }
+
 
 /* 机械组展示页的css结束 */
 
