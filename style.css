@@ -757,6 +757,29 @@ body {
 }
 
 /* ================================================= */
+/* 机械组强制覆写：左文字 + 右侧两图上下叠放 */
+/* ================================================= */
+
+/* 【新增这部分】：强制隐藏所有未激活的模块，修复铺开问题 */
+#machine .mc-content {
+    display: none !important;
+}
+
+/* 只有带有 .active 的模块才会以 flex 左右分栏显示 */
+#machine .mc-content.active {
+    display: flex !important;
+    flex-direction: row !important; 
+    flex-wrap: nowrap !important;   
+    align-items: center !important; 
+    justify-content: space-between !important;
+    gap: 50px !important; 
+    padding: 30px 0 !important;
+}
+
+/* ... 保持下方之前的代码不变 ... */
+
+
+/* ================================================= */
 /* 左文字 + 右侧两图上下叠放 */
 /* ================================================= */
 
