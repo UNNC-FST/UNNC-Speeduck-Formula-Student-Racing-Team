@@ -982,44 +982,6 @@ body {
     }
 }
 
-/* --- 强制极致压缩过往荣誉页的所有间隙 --- */
-
-/* 1. 缩小大标题与年份按钮之间的距离 */
-.past-section .sec-title {
-    margin-bottom: 20px !important; 
-}
-
-/* 2. 缩小年份按钮与下方文字区域的距离 */
-.past-nav {
-    margin-bottom: 15px !important;
-}
-
-/* 3. 彻底清空文字页和图片页的上下内/外边距 */
-.past-page {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* 4. 强制压缩红色分割线（line-divider）上下的空间 */
-.past-info .line-divider {
-    margin: 10px 0 10px 0 !important;
-}
-
-/* 5. 极致压缩段落文字，让它紧贴上方的线和下方的图片 */
-.past-info p {
-    margin-top: 0 !important;
-    margin-bottom: 15px !important; /* 关键点：这里控制文字到图片的距离，可以改成 10px 甚至 5px */
-    padding-bottom: 0 !important;
-    line-height: 1.5 !important;
-}
-
-/* 6. 确保图片网格顶部没有空隙，同时将三张图片之间的横向/纵向缝隙收缩 */
-.past-gallery {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    gap: 15px !important; /* 原为25px，缩小图片间的缝隙，整体感更强 */
-}
-
 /* 过往荣誉展示页的css结束 */
 
 
