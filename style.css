@@ -977,7 +977,8 @@ body {
 /* 1. 柔和的背景调校 */
 .spon-section {
     padding: 100px 50px;
-    background: radial-gradient(circle at center, #1f1f1f 0%, #080808 100%); /* 柔和的径向渐变，中心微亮 */
+    background-color: #151515 !important; /* 兜底的柔和深灰纯色 */
+    background-image: radial-gradient(circle at center, #2a2a2a 0%, #0d0d0d 100%) !important; /* 调亮了一点的柔和渐变 */
     text-align: center;
 }
 
@@ -1039,12 +1040,10 @@ body {
     max-width: 80%;
     max-height: 100%;
     object-fit: contain; /* 保证 Logo 不变形 */
-    filter: grayscale(100%) opacity(0.6); /* 默认变灰并降低透明度，显得柔和 */
     transition: 0.4s ease;
 }
 
 .spon-card:hover .spon-logo img {
-    filter: grayscale(0%) opacity(1); /* 悬停时恢复原有色彩和亮度 */
     transform: scale(1.05);
 }
 
