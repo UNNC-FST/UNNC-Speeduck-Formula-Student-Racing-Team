@@ -63,6 +63,30 @@ function showMc(groupId) {
 
 //机械的js结束
 
+//过往荣誉的js
+
+// 过往荣誉 (Past Gallery) 切换功能
+function showPast(event, yearId) {
+    // 1. 隐藏所有年份的内容
+    const contents = document.querySelectorAll('.past-content');
+    contents.forEach(content => {
+        content.classList.remove('active');
+    });
+
+    // 2. 移除所有按钮的激活状态
+    const buttons = document.querySelectorAll('.past-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // 3. 显示被点击年份的内容
+    document.getElementById('past-' + yearId).classList.add('active');
+
+    // 4. 为当前点击的按钮添加激活状态
+    event.currentTarget.classList.add('active');
+}
+
+//过往荣誉的js结束
 
 
 
