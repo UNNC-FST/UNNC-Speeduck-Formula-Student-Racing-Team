@@ -419,11 +419,74 @@
 
     <section id="gallery" class="gallery-section">
     <!-- 过往荣誉展示页 -->
-        <h2>TRACK GALLERY</h2>
-        <div class="gallery-grid">
-            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Car+Front" alt="Racing Car"></div>
-            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Cockpit" alt="Cockpit View"></div>
-            <div class="photo-card"><img src="https://placehold.co/600x400/111/red?text=Track+Action" alt="On Track"></div>
+    <div class="container">
+            <h2 class="sec-title">PAST <span class="highlight">GLORY</span></h2>
+            
+            <div class="past-nav">
+                <button class="past-btn active" onclick="showPast(event, 'y2023')">2023 赛季</button>
+                <button class="past-btn" onclick="showPast(event, 'y2022')">2022 赛季</button>
+                <button class="past-btn" onclick="showPast(event, 'y2021')">2021 赛季</button>
+            </div>
+
+            <div id="past-y2023" class="past-content active">
+                <div class="past-page text-page">
+                    <div class="past-info">
+                        <span class="module-tag">SEASON: 2023</span>
+                        <h3>2023 <span class="highlight">Breakthrough</span></h3>
+                        <div class="line-divider"></div>
+                        <p>
+                            2023赛季是车队实现全面突破的一年。 <strong>全国大学生方程式汽车大赛（FSEC）</strong>。
+                        </p>
+                    </div>
+                </div>
+                <div class="past-page image-page">
+                    <div class="past-gallery">
+                        <div class="img-wrapper"><img src="images/past23-1.jpg" alt="2023 Car" loading="lazy"></div>
+                        <div class="img-wrapper"><img src="images/past23-2.jpg" alt="2023 Team" loading="lazy"></div>
+                        <div class="img-wrapper"><img src="images/past23-3.jpg" alt="2023 Action" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="past-y2022" class="past-content">
+                <div class="past-page text-page">
+                    <div class="past-info">
+                        <span class="module-tag">SEASON: 2022</span>
+                        <h3>2022 <span class="highlight">Innovation</span></h3>
+                        <div class="line-divider"></div>
+                        <p>
+                            2022赛季，车队迎来了架构与技术的双重革新。由跨专业学生组成的团队Monocoque），
+                    </div>
+                </div>
+                <div class="past-page image-page">
+                    <div class="past-gallery">
+                        <div class="img-wrapper"><img src="images/past22-1.jpg" alt="2022 Car" loading="lazy"></div>
+                        <div class="img-wrapper"><img src="images/past22-2.jpg" alt="2022 Team" loading="lazy"></div>
+                        <div class="img-wrapper"><img src="images/past22-3.jpg" alt="2022 Action" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="past-y2021" class="past-content">
+                <div class="past-page text-page">
+                    <div class="past-info">
+                        <span class="module-tag">SEASON: 2021</span>
+                        <h3>2021 <span class="highlight">Foundation</span></h3>
+                        <div class="line-divider"></div>
+                        <p>
+                            2021赛季是奠定 UNNC Speeduck 坚实基础的一年。克服了疫情带来的供应链挑战，
+                        </p>
+                    </div>
+                </div>
+                <div class="past-page image-page">
+                    <div class="past-gallery">
+                        <div class="img-wrapper"><img src="images/past21-1.jpg" alt="2021 Car" loading="lazy"></div>
+                        <div class="img-wrapper"><img src="images/past21-2.jpg" alt="2021 Team" loading="lazy"></div>
+                        <div class="img-wrapper"><img src="images/past21-3.jpg" alt="2021 Action" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
