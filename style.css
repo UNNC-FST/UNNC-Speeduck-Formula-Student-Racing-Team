@@ -855,20 +855,19 @@ body {
 /* 机械组展示页的css结束 */
 
 
+
 /* 过往荣誉展示页的css开始 */
 
 .past-section {
-    padding: 80px 50px; /* 稍微缩小了整体的外侧上下边距 */
+    padding: 80px 50px;
     background: #0d0d0d;
-    position: relative;
 }
 
-/* 导航按钮设计 */
 .past-nav {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px; /* 按钮和文字的紧凑间距 */
+    margin-bottom: 25px; /* 标题与内容的距离 */
 }
 
 .past-btn {
@@ -891,39 +890,22 @@ body {
     color: white;
 }
 
-/* 核心内容区切换动画 */
+/* 核心布局：现在一切由这里掌控 */
 .past-content {
     display: none;
     animation: fadeIn 0.5s ease;
 }
 
-/* --- 核心修复：彻底覆盖电控组的全局高度霸权 --- */
 .past-content.active {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px !important; /* 精准控制：文字块和图片块之间的缝隙 */
-}
-
-.past-section .text-page,
-.past-section .image-page {
-    min-height: 0 !important; /* 彻底粉碎 80vh 和 100vh 的限制 */
-    height: auto !important;
-    padding: 0 !important;    /* 彻底清除 100px 的多余内边距 */
-    background: transparent !important; /* 去除图片页自带的渐变背景干扰 */
-}
-/* ------------------------------------------------ */
-
-/* 文字介绍区排版 */
-.past-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    gap: 20px; /* 【绝对关键】：这里控制文字块与图片块的间距，数值越小越紧凑！ */
 }
 
 .past-info {
     width: 100%;
-    max-width: 1200px; /* 与下方图片网格对齐 */
+    max-width: 1200px;
 }
 
 .past-info h3 {
@@ -937,8 +919,7 @@ body {
     font-size: 1.25rem;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.7);
-    margin-top: 15px;
-    margin-bottom: 0 !important; /* 取消段落底部的自带边距，靠父级 gap 控制 */
+    margin: 15px 0 0 0; /* 仅保留顶部间距，底部间距清零 */
     border-left: 3px solid rgba(255, 59, 59, 0.4);
     padding-left: 20px;
     text-align: left;
@@ -949,14 +930,12 @@ body {
     font-weight: bold;
 }
 
-/* 三张照片的画廊网格 */
 .past-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; /* 三张图片之间的距离稍微收紧 */
+    gap: 20px; 
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 .past-gallery .img-wrapper {
@@ -981,7 +960,6 @@ body {
     transform: scale(1.05);
 }
 
-/* 手机端响应式适配 */
 @media (max-width: 900px) {
     .past-gallery {
         grid-template-columns: 1fr; 
@@ -991,7 +969,6 @@ body {
         aspect-ratio: 16 / 9;
     }
 }
-
 
 /* 过往荣誉展示页的css结束 */
 
