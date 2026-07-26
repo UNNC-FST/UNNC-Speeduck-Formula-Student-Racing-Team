@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="宁波诺丁汉大学速鸭方程式车队官方网站，展示车队、赛车工程、赛事历程与合作伙伴。">
+    <meta name="theme-color" content="#090909">
     <title>UNNC Speeduck Formula Student Racing Team</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">UNNC Speeduck Formula Student <span class="highlight">RACING Team</span></div>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="site-nav">
             <li><a href="#home">Home</a></li>
             <!-- 主页按钮 -->
             <li><a href="#bine">Business</a></li>
@@ -33,12 +40,12 @@
         <!-- 视频版本 <video autoplay muted loop playsinline class="back-video"> <source src="mainpagevideo.mp4" type="video/mp4"> </video> -->
         
         <div class="hero-slideshow">
-        <div class="slide" style="background-image: url('images/photo1.jpg');"></div>
-        <div class="slide" style="background-image: url('images/photo2.jpg');"></div>
-        <div class="slide" style="background-image: url('images/photo3.jpg');"></div>
-        <div class="slide" style="background-image: url('images/photo4.jpg');"></div>
-        <div class="slide" style="background-image: url('images/photo5.jpg');"></div>
-        <div class="slide" style="background-image: url('images/photo6.jpg');"></div>
+        <div class="slide" style="background-image: url('images/photo1.webp');"></div>
+        <div class="slide" style="background-image: url('images/photo2.webp');"></div>
+        <div class="slide" style="background-image: url('images/photo3.webp');"></div>
+        <div class="slide" style="background-image: url('images/photo4.webp');"></div>
+        <div class="slide" style="background-image: url('images/photo5.webp');"></div>
+        <div class="slide" style="background-image: url('images/photo6.webp');"></div>
     </div>
 
         <div class="hero-overlay"></div>
@@ -46,8 +53,8 @@
         <div class="hero-content">
             <h1>WE RACE AS <span class="highlight">ONE</span></h1>
             <h2>PUSH THE <span class="highlight">LIMIT</span></h2>
-            <p>UNNC Speeduck Formula Student Racingn Team </p>
-            <button class="cta-btn" onclick="scrollToSecmain()">Meet The Team</button>
+            <p>UNNC Speeduck Formula Student Racing Team</p>
+            <button class="cta-btn" type="button" data-scroll-target="secmain">Meet The Team</button>
         </div>
     </section>
 
@@ -76,7 +83,7 @@
         <div class="hub-grid">
             
             <a href="#bine" class="hub-card">
-                <div class="card-bg" style="background-image: url('images/photo1.jpg');"></div>
+                <div class="card-bg" style="background-image: url('images/photo1.webp');"></div>
                 <div class="card-overlay">
                     <div class="card-header">
                         <span class="module-code">01</span>
@@ -84,13 +91,13 @@
                     </div>
                     <div class="teaser-content">
                         <p>负责车队运营、商务合作与项目成本管理。</p>
-                        <span class="preview-tag">COMING SOON: 2024 Sponsor Kit</span>
+                        <span class="preview-tag">PARTNERSHIP · ENGINEERING · IMPACT</span>
                     </div>
                 </div>
             </a>
 
             <a href="#ele" class="hub-card">
-                <div class="card-bg" style="background-image: url('images/photo2.jpg');"></div>
+                <div class="card-bg" style="background-image: url('images/photo2.webp');"></div>
                 <div class="card-overlay">
                     <div class="card-header">
                         <span class="module-code">02</span>
@@ -104,7 +111,7 @@
             </a>
 
             <a href="#machine" class="hub-card">
-                <div class="card-bg" style="background-image: url('images/photo3.jpg');"></div>
+                <div class="card-bg" style="background-image: url('images/photo3.webp');"></div>
                 <div class="card-overlay">
                     <div class="card-header">
                         <span class="module-code">03</span>
@@ -118,7 +125,7 @@
             </a>
             
             <a href="#gallery" class="hub-card">
-                <div class="card-bg" style="background-image: url('images/photo4.jpg');"></div>
+                <div class="card-bg" style="background-image: url('images/photo4.webp');"></div>
                 <div class="card-overlay">
                     <div class="card-header">
                         <span class="module-code">04</span>
@@ -132,11 +139,11 @@
             </a>
 
             <a href="#spon" class="hub-card">
-                <div class="card-bg" style="background-image: url('images/photo5.jpg');"></div>
+                <div class="card-bg" style="background-image: url('images/photo5.webp');"></div>
                 <div class="card-overlay">
                     <div class="card-header">
                         <span class="module-code">05</span>
-                        <h3>SPONORS</h3>
+                        <h3>SPONSORS</h3>
                     </div>
                     <div class="teaser-content">
                         <p>感谢合作伙伴对学生工程实践的支持。</p>
@@ -193,26 +200,26 @@
         <div class="bine-gallery">
             <h3>SEASON <span class="highlight">MOMENTS</span></h3>
             <div class="gallery-grid">
-                <div class="photo-card"><img src="images/bus1.jpg" alt="Commercial Event" loading="lazy"></div>
-                <div class="photo-card"><img src="images/bus2.jpg" alt="Team Work" loading="lazy"></div>
-                <div class="photo-card"><img src="images/bus3.jpg" alt="Sponsor Visit" loading="lazy"></div>
-                <div class="photo-card"><img src="images/bus4.jpg" alt="Expo" loading="lazy"></div>
+                <div class="photo-card"><img src="images/bus1.webp" alt="Commercial Event" loading="lazy"></div>
+                <div class="photo-card"><img src="images/bus2.webp" alt="Team Work" loading="lazy"></div>
+                <div class="photo-card"><img src="images/bus3.webp" alt="Sponsor Visit" loading="lazy"></div>
+                <div class="photo-card"><img src="images/bus4.webp" alt="Expo" loading="lazy"></div>
             </div>
         </div>
 
         <div id="contact-us" class="contact-social-block">
             <div class="contact-info">
                 <h3>CONTACT <span class="highlight">US</span></h3>
-                <p>Email: unncfst@gamil.com</p>
+                <p>Email: <a href="mailto:unncfst@gmail.com">unncfst@gmail.com</a></p>
                 <p>Location: UNNC Engineering Building, Ningbo</p>
             </div>
             
             <div class="social-links">
-                <a href="images/wechat-qrcode.jpg" target="_blank" class="social-btn wx">微信公众号</a>
-                <a href="https://space.bilibili.com/3546796326390520?spm_id_from=333.337.0.0" target="_blank" class="social-btn bili">Bilibili</a>
-                <a href="https://weibo.com/u/7683973943" target="_blank" class="social-btn wb">微博 Weibo</a>
-                <a href="https://www.xiaohongshu.com/user/profile/6535150c000000000d006e90?xsec_token=ABIodcT0x00LDAYE7DD_QAvL3wG4Ro-QK82ilkhzbcwyc=&xsec_source=pc_search" target="_blank" class="social-btn xhs">小红书 Xiaohongshu</a>
-                <a href="https://www.douyin.com/user/MS4wLjABAAAAiPexqJzngg6eGe_vvrygCezxUfbBJb5sj4Pp5PIn9r4fJouM7h7zWj-SRD5UAh4l?from_tab_name=main" target="_blank" class="social-btn dy">抖音 Douyin</a>
+                <a href="images/wechat-qrcode.jpg" target="_blank" rel="noopener noreferrer" class="social-btn wx">微信公众号</a>
+                <a href="https://space.bilibili.com/3546796326390520?spm_id_from=333.337.0.0" target="_blank" rel="noopener noreferrer" class="social-btn bili">Bilibili</a>
+                <a href="https://weibo.com/u/7683973943" target="_blank" rel="noopener noreferrer" class="social-btn wb">微博 Weibo</a>
+                <a href="https://www.xiaohongshu.com/user/profile/6535150c000000000d006e90?xsec_token=ABIodcT0x00LDAYE7DD_QAvL3wG4Ro-QK82ilkhzbcwyc=&xsec_source=pc_search" target="_blank" rel="noopener noreferrer" class="social-btn xhs">小红书 Xiaohongshu</a>
+                <a href="https://www.douyin.com/user/MS4wLjABAAAAiPexqJzngg6eGe_vvrygCezxUfbBJb5sj4Pp5PIn9r4fJouM7h7zWj-SRD5UAh4l?from_tab_name=main" target="_blank" rel="noopener noreferrer" class="social-btn dy">抖音 Douyin</a>
             </div>
             
         </div>
@@ -225,9 +232,9 @@
         <h2 class="sec-title">ELECTRIC <span class="highlight">GROUP</span></h2>
         
         <div class="el-nav">
-            <button class="el-btn active" onclick="showEl('hv')">高压 HV</button>
-            <button class="el-btn" onclick="showEl('lv')">低压 LV</button>
-            <button class="el-btn" onclick="showEl('sw')">软件 SW</button>
+            <button class="el-btn active" type="button" data-panel-group="electric" data-panel="hv" aria-pressed="true">高压 HV</button>
+            <button class="el-btn" type="button" data-panel-group="electric" data-panel="lv" aria-pressed="false">低压 LV</button>
+            <button class="el-btn" type="button" data-panel-group="electric" data-panel="sw" aria-pressed="false">软件 SW</button>
         </div>
 
         <div id="el-hv" class="el-content active">
@@ -263,8 +270,8 @@
             </div>
             <div class="el-page image-page">
                 <div class="el-full-gallery">
-                    <div class="img-wrapper"><img src="images/hv-1.jpg" alt="HV Battery" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/hv-2.jpg" alt="HV Testing" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/hv-1.webp" alt="HV Battery" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/hv-2.webp" alt="HV Testing" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -287,8 +294,8 @@
             </div>
             <div class="el-page image-page">
                 <div class="el-full-gallery">
-                    <div class="img-wrapper"><img src="images/lv-1.jpg" alt="LV PCB" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/lv-2.jpg" alt="LV Harness" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/lv-1.webp" alt="LV PCB" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/lv-2.webp" alt="LV Harness" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -304,8 +311,8 @@
             </div>
             <div class="el-page image-page">
                 <div class="el-full-gallery">
-                    <div class="img-wrapper"><img src="images/sw-1.jpg" alt="SW Code" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/sw-2.jpg" alt="SW Simulation" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/sw-1.webp" alt="SW Code" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/sw-2.webp" alt="SW Simulation" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -319,10 +326,10 @@
             <h2 class="sec-title">MECHANICAL <span class="highlight">ENGINEERING</span></h2>
             
             <div class="mc-nav">
-                <button class="mc-btn active" onclick="showMc('braking')">制动 BRAKING</button>
-                <button class="mc-btn" onclick="showMc('chassis')">底盘 CHASSIS</button>
-                <button class="mc-btn" onclick="showMc('aero')">空套 AERO</button>
-                <button class="mc-btn" onclick="showMc('frame')">车架 FRAME</button>
+                <button class="mc-btn active" type="button" data-panel-group="mechanical" data-panel="braking" aria-pressed="true">制动 BRAKING</button>
+                <button class="mc-btn" type="button" data-panel-group="mechanical" data-panel="chassis" aria-pressed="false">底盘 CHASSIS</button>
+                <button class="mc-btn" type="button" data-panel-group="mechanical" data-panel="aero" aria-pressed="false">空套 AERO</button>
+                <button class="mc-btn" type="button" data-panel-group="mechanical" data-panel="frame" aria-pressed="false">车架 FRAME</button>
             </div>
     
         <div id="mc-braking" class="mc-content active">
@@ -336,8 +343,8 @@
             </div>
             <div class="mc-page image-page">
                 <div class="mc-full-gallery">
-                    <div class="img-wrapper"><img src="images/machine-brk1.jpg" alt="Braking 1" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/machine-brk2.jpg" alt="Braking 2" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-brk1.webp" alt="Braking 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-brk2.webp" alt="Braking 2" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -358,8 +365,8 @@
             </div>
             <div class="mc-page image-page">
                 <div class="mc-full-gallery">
-                    <div class="img-wrapper"><img src="images/machine-cha1.jpg" alt="Chassis 1" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/machine-cha2.jpg" alt="Chassis 2" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-cha1.webp" alt="Chassis 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-cha2.webp" alt="Chassis 2" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -389,8 +396,8 @@
             </div>
             <div class="mc-page image-page">
                 <div class="mc-full-gallery">
-                    <div class="img-wrapper"><img src="images/machine-aero1.jpg" alt="Aero 1" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/machine-aero2.jpg" alt="Aero 2" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-aero1.webp" alt="Aero 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-aero2.webp" alt="Aero 2" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -408,8 +415,8 @@
             </div>
             <div class="mc-page image-page">
                 <div class="mc-full-gallery">
-                    <div class="img-wrapper"><img src="images/machine-frm1.jpg" alt="Frame 1" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/machine-frm2.jpg" alt="Frame 2" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-frm1.webp" alt="Frame 1" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-frm2.webp" alt="Frame 2" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -423,55 +430,55 @@
             <h2 class="sec-title">PAST <span class="highlight">GLORY</span></h2>
             
             <div class="past-nav">
-                <button class="past-btn active" onclick="showPast(event, 'y2023')">2025 赛季</button>
-                <button class="past-btn" onclick="showPast(event, 'y2022')">2024 赛季</button>
-                <button class="past-btn" onclick="showPast(event, 'y2021')">2023 赛季</button>
+                <button class="past-btn active" type="button" data-panel-group="past" data-panel="2025" aria-pressed="true">2025 赛季</button>
+                <button class="past-btn" type="button" data-panel-group="past" data-panel="2024" aria-pressed="false">2024 赛季</button>
+                <button class="past-btn" type="button" data-panel-group="past" data-panel="2023" aria-pressed="false">2023 赛季</button>
             </div>
 
-            <div id="past-y2023" class="past-content active">
+            <div id="past-2025" class="past-content active">
                 <div class="past-info">
                     <span class="module-tag">SEASON: 2025</span>
                     <h3>2025 <span class="highlight">Breakthrough</span></h3>
                     <div class="line-divider"></div>
                     <p>
-                        <strong>2025赛季</strong> 
+                        <strong>2025赛季</strong> 车队持续迭代整车设计，在工程验证、制造协作与赛事准备中实现新的突破。</p>
                 </div>
                 <div class="past-gallery">
-                    <div class="img-wrapper"><img src="images/past25-1.jpg" alt="2025 Car" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/past25-2.jpg" alt="2025 Team" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/past25-3.jpg" alt="2025 Action" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/photo2.webp" alt="2025 Car" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/photo3.webp" alt="2025 Team" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/photo4.webp" alt="2025 Action" loading="lazy"></div>
                 </div>
             </div>
 
-            <div id="past-y2022" class="past-content">
+            <div id="past-2024" class="past-content">
                 <div class="past-info">
                     <span class="module-tag">SEASON: 2024</span>
                     <h3>2024 <span class="highlight">Innovation</span></h3>
                     <div class="line-divider"></div>
                     <p>
-                        <strong>2024赛季</strong>
+                        <strong>2024赛季</strong> 团队围绕电动赛车平台推进技术创新，完善设计、制造、测试和运营体系。
                     </p>
                 </div>
                 <div class="past-gallery">
-                    <div class="img-wrapper"><img src="images/past24-1.jpg" alt="2024 Car" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/past24-2.jpg" alt="2024 Team" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/past24-3.jpg" alt="2024 Action" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/photo5.webp" alt="2024 Car" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/bus1.webp" alt="2024 Team" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/photo6.webp" alt="2024 Action" loading="lazy"></div>
                 </div>
             </div>
 
-            <div id="past-y2021" class="past-content">
+            <div id="past-2023" class="past-content">
                 <div class="past-info">
                     <span class="module-tag">SEASON: 2023</span>
                     <h3>2023 <span class="highlight">Foundation</span></h3>
                     <div class="line-divider"></div>
                     <p>
-                        <strong>2023赛季</strong>
+                        <strong>2023赛季</strong> 车队夯实组织和工程基础，为后续电动赛车研发与赛事参与建立完整框架。
                     </p>
                 </div>
                 <div class="past-gallery">
-                    <div class="img-wrapper"><img src="images/past23-1.jpg" alt="2023 Car" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/past23-2.jpg" alt="2023 Team" loading="lazy"></div>
-                    <div class="img-wrapper"><img src="images/past23-3.jpg" alt="2023 Action" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/photo1.webp" alt="2023 Car" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-frm1.webp" alt="2023 Team" loading="lazy"></div>
+                    <div class="img-wrapper"><img src="images/machine-cha1.webp" alt="2023 Action" loading="lazy"></div>
                 </div>
             </div>
 
@@ -499,7 +506,7 @@
                 </div>
                 <div class="spon-card">
                     <div class="spon-logo"><img src="images/sponsor4.png" alt="Sponsor 4" loading="lazy"></div>
-                    <div class="spon-name">K.SHINE STUDIO (KSS)VI-GRADE</div>
+                    <div class="spon-name">K.SHINE STUDIO (KSS) · VI-GRADE</div>
                 </div>
                 <div class="spon-card">
                     <div class="spon-logo"><img src="images/sponsor5.png" alt="Sponsor 5" loading="lazy"></div>
@@ -535,12 +542,11 @@
     </section>
 
     <footer>
-        <p>2025 UNNC Speeduck Formula Student Racing Team. Built for Speed.</p>
-        <p>The website is completed by Qi Cao individually. </p>
+        <p>© 2025 UNNC Speeduck Formula Student Racing Team. Built for Speed.</p>
+        <p>Website designed and developed by Qi Cao.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
 </html>
 <!-- The website is completed by Qi Cao individually-->

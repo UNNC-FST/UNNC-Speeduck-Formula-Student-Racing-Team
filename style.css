@@ -188,8 +188,6 @@ body {
 .photo-card img:hover {
     transform: scale(1.02);
 }
-    transform: scale(1.02);
-}
 /* 次页展示页的css开始 */
 
 /* --- 次页展示页增强样式 --- */
@@ -1102,8 +1100,33 @@ body {
 }
 
 /* 赞助商展示页的css结束 */
-
-
-
-
-
+/* Accessibility, navigation and rendering refinements */
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 88px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible { outline: 3px solid #ff3b3b; outline-offset: 4px; }
+.navbar.is-scrolled { background: rgba(0, 0, 0, 0.96); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28); }
+.nav-toggle { display: none; width: 44px; height: 44px; padding: 10px; border: 1px solid rgba(255,255,255,.22); background: rgba(0,0,0,.35); cursor: pointer; }
+.nav-toggle span { display: block; height: 2px; margin: 5px 0; background: #fff; transition: transform .25s ease, opacity .25s ease; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.contact-info a { color: #fff; text-decoration-color: #ff3b3b; text-underline-offset: 4px; }
+.secmain-section, .bine-section, .ele-section, .machine-section, .gallery-section, .spon-section { content-visibility: auto; contain-intrinsic-size: 900px; }
+@media (max-width: 900px) {
+    .navbar { padding: 14px 20px; }
+    .logo { max-width: calc(100% - 64px); font-size: 1.25rem; line-height: 1.05; }
+    .nav-toggle { display: block; flex: 0 0 auto; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; display: grid; gap: 0; margin: 0; padding: 8px 20px 18px; background: rgba(0,0,0,.97); transform: translateY(-130%); opacity: 0; pointer-events: none; transition: transform .25s ease, opacity .25s ease; }
+    .nav-links.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .nav-links a { display: block; padding: 10px 0; }
+    .hero h1 { font-size: clamp(3.4rem, 17vw, 5rem); }
+    .hero-content { padding: 0 20px; text-align: center; }
+    .past-nav, .el-nav, .mc-nav { overflow-x: auto; justify-content: flex-start; padding: 4px; }
+    .past-btn, .el-btn, .mc-btn { flex: 0 0 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .slide:first-child { opacity: 1; }
+}

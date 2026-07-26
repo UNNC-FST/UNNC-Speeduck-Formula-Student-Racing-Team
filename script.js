@@ -1,93 +1,63 @@
-// script.js
+'use strict';
 
-// Function to handle smooth scrolling
-function scrollToSecmain() {
-    // 1. Find the section with id="specs"
-    const specsSection = document.getElementById('secmain');
-    
-    // 2. Use the built-in 'scrollIntoView' method with 'smooth' behavior
-    specsSection.scrollIntoView({ 
-        behavior: 'smooth' 
-    });
+const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+function updateNavbar() {
+    navbar?.classList.toggle('is-scrolled', window.scrollY > 50);
 }
 
-// Optional: Add a scroll listener to change navbar background
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    // If we scroll down more than 50px, make navbar solid black
-    if (window.scrollY > 50) {
-        navbar.style.background = '#000000';
-    } else {
-        navbar.style.background = 'rgba(0,0,0,0.8)';
-    }
+function closeNavigation() {
+    if (!navToggle || !navLinks) return;
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', '打开导航菜单');
+    navLinks.classList.remove('is-open');
+}
+
+navToggle?.addEventListener('click', () => {
+    const willOpen = navToggle.getAttribute('aria-expanded') !== 'true';
+    navToggle.setAttribute('aria-expanded', String(willOpen));
+    navToggle.setAttribute('aria-label', willOpen ? '关闭导航菜单' : '打开导航菜单');
+    navLinks?.classList.toggle('is-open', willOpen);
 });
 
-// 电控的js
-function showEl(groupId) {
-    // 1. 隐藏所有模块
-    const contents = document.querySelectorAll('.el-content');
-    contents.forEach(content => content.classList.remove('active'));
+document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', closeNavigation);
+});
 
-    // 2. 取消所有按钮状态
-    const buttons = document.querySelectorAll('.el-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-
-    // 3. 激活当前选中的模块和按钮
-    document.getElementById('el-' + groupId).classList.add('active');
-    if (window.event) window.event.currentTarget.classList.add('active');
-
-    // 4. (可选) 切换时自动滚动到电控区顶部，开始新一页的阅读
-    document.getElementById('ele').scrollIntoView({ behavior: 'smooth' });
-}
-//电控js结束
-
-
-//机械的js
-
-function showMc(groupId) {
-    // 隐藏所有机械组内容
-    const contents = document.querySelectorAll('.mc-content');
-    contents.forEach(content => content.classList.remove('active'));
-
-    // 取消按钮激活
-    const buttons = document.querySelectorAll('.mc-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-
-    // 显示目标内容
-    document.getElementById('mc-' + groupId).classList.add('active');
-    if (window.event) window.event.currentTarget.classList.add('active');
-
-    // 平滑滚动到板块顶部，防止用户在页面下方切换时迷失
-    document.getElementById('machine').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-//机械的js结束
-
-//过往荣誉的js
-
-// 过往荣誉 (Past Gallery) 切换功能
-function showPast(event, yearId) {
-    // 1. 隐藏所有年份的内容
-    const contents = document.querySelectorAll('.past-content');
-    contents.forEach(content => {
-        content.classList.remove('active');
+document.querySelectorAll('[data-scroll-target]').forEach((button) => {
+    button.addEventListener('click', () => {
+        document.getElementById(button.dataset.scrollTarget)?.scrollIntoView({ behavior: 'smooth' });
     });
+});
 
-    // 2. 移除所有按钮的激活状态
-    const buttons = document.querySelectorAll('.past-btn');
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
+const panelGroups = {
+    electric: { button: '.el-btn', panel: '.el-content', prefix: 'el-', section: 'ele' },
+    mechanical: { button: '.mc-btn', panel: '.mc-content', prefix: 'mc-', section: 'machine' },
+    past: { button: '.past-btn', panel: '.past-content', prefix: 'past-' }
+};
+
+document.querySelectorAll('[data-panel-group]').forEach((button) => {
+    button.addEventListener('click', () => {
+        const config = panelGroups[button.dataset.panelGroup];
+        if (!config) return;
+        document.querySelectorAll(config.panel).forEach((panel) => panel.classList.remove('active'));
+        document.querySelectorAll(config.button).forEach((item) => {
+            item.classList.remove('active');
+            item.setAttribute('aria-pressed', 'false');
+        });
+        document.getElementById(config.prefix + button.dataset.panel)?.classList.add('active');
+        button.classList.add('active');
+        button.setAttribute('aria-pressed', 'true');
+        if (config.section) {
+            document.getElementById(config.section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
+});
 
-    // 3. 显示被点击年份的内容
-    document.getElementById('past-' + yearId).classList.add('active');
-
-    // 4. 为当前点击的按钮添加激活状态
-    event.currentTarget.classList.add('active');
-}
-
-//过往荣誉的js结束
-
-
-
-
+window.addEventListener('scroll', updateNavbar, { passive: true });
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeNavigation();
+});
+updateNavbar();
